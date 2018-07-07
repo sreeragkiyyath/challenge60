@@ -10,6 +10,8 @@ public class LinkedListService {
 		cr.addElement(986);
 		cr.addElement(256);
 		cr.addElement(5656);
+		cr.addFirst(744);
+		cr.getNumberOfElements();
 		cr.process();
 		
 	}

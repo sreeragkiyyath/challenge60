@@ -29,8 +29,7 @@ public class LinkedListCore {
 	public void addElement(int nodeData) {
 		if(start==null) {
 			return;
-		}
-		else {
+		} else {
 		LinkedListCore	item = new LinkedListCore(nodeData);
 			while(start.link!=null) {
 				start = start.link;				
@@ -42,12 +41,33 @@ public class LinkedListCore {
 		}	
 	}
 	
+	public void addFirst(int nodeData) {
+		if(start==null) {
+			return;
+		}
+		LinkedListCore	item = new LinkedListCore(nodeData);
+		item.link= firstNode;
+		firstNode=item;
+	}
+	
 	public void process() {
 		LinkedListCore temp= firstNode;
 		while (temp.link!=null) {
 			System.out.println(temp.data + "  -->");
 			temp = temp.link;
 		}
+		System.out.println(temp.data + " : is the linkedlist");
+	}
+	
+	public void getNumberOfElements() {
+		int size = 0;
+		LinkedListCore temp= firstNode;
+		while (temp.link!=null) {
+			//System.out.println(temp.data + "  -->");
+			temp = temp.link;
+			size++;
+		}
+		System.out.println((size + 1 )+ "is the linked list size" );
 	}
 	
 }
